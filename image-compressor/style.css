@@ -1,0 +1,161 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #927dfc;
+  padding: 20px;
+}
+
+.wrapper {
+  width: 450px;
+  height: 288px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 9px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: height 0.2s ease;
+}
+
+.wrapper.active {
+  height: 537px;
+}
+
+.wrapper .upload-box {
+  height: 225px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #afafaf;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.wrapper .upload-box:hover {
+  border-color: #927dfc;
+  background-color: #faf9ff;
+}
+
+.wrapper.active .upload-box {
+  border: none;
+  background: none;
+}
+
+.upload-box p {
+  font-size: 1.06rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+.wrapper.active .upload-box p {
+  display: none;
+}
+
+.wrapper.active .upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.wrapper .content {
+  opacity: 0;
+  margin-top: 28px;
+  pointer-events: none;
+}
+
+.wrapper.active .content {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.content .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .row .column {
+  width: calc(100% / 2 - 15px);
+}
+
+.row .column label {
+  font-size: 1.06rem;
+  color: #333;
+}
+
+.sizes .column input {
+  width: 100%;
+  height: 49px;
+  outline: none;
+  margin-top: 7px;
+  padding: 0 15px;
+  font-size: 1.06rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  transition: border 0.2s ease;
+}
+
+.sizes .column input:focus {
+  padding: 0 14px;
+  border: 2px solid #927dfc;
+}
+
+.content .checkboxes {
+  margin-top: 20px;
+}
+
+.checkboxes .column {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkboxes .column input {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  accent-color: #927dfc;
+  cursor: pointer;
+}
+
+.checkboxes .column label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.content .download-btn {
+  width: 100%;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 15px 0;
+  margin: 30px 0 10px;
+  background: #927dfc;
+  text-transform: uppercase;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.content .download-btn:hover {
+  background: #7d64fa;
+}
+
+.content .download-btn:active {
+  transform: scale(0.99);
+}
